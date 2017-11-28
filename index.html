@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Live Bitcoin</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="method">
+        <button id="vanilla" class="bgcolor">
+            Vanilla Javascript
+        </button>
+        <button id="jquery" class="bgcolor">
+            jQuery Method
+        </button>
+        <button id="fetch" class="bgcolor">
+            Fetch API
+        </button>
+
+    </div>
+    <div class="container">
+
+        <h1>CoinDesk Bitcoin Price Index <span id="type"> - Vanilla javascript</span></h1>
+        <h3>Bitcoin Price : <span id="price">...loading</span> <span id="cur"></span></h3>
+
+        <p>Select the Currency Type:</p>
+        <form>
+            <input type="radio" name="cur" value="USD" checked> USD
+            <input type="radio" name="cur" value="EUR"> EUR
+            <input type="radio" name="cur" value="GBP"> GBP
+            <input type="radio" name="cur" value="INR"> INR
+            <br>
+            <input type="submit" value="Get Data" id="button">
+        </form>
+        <p id="alert"></p>
+        <br>
+        <h5>Price Updated on: <span id="time"></span></h5>
+        <br>
+        <br>
+        <p>Disclaimer: <span id="text"></span></p>
+    </div>
+
+
+
+    <script id="mainjs" src="app.js"></script>
+    <script>
+        $("#jquery").click(function() {
+
+            $("#mainjs").attr("src", "jquery.js");
+            $(".container").css("background-color", "#01848F");
+            $(".container").css("color", "#fff");
+            $("#type").text(" - jQuery");
+
+        })
+
+        $("#vanilla").click((function() {
+            $("#mainjs").attr("src", "app.js");
+            $(".container").css("background-color", "#FCC118");
+            $(".container").css("color", "#000");
+            $("#type").text(" - Vanilla Javascript");
+
+        }))
+
+        $("#fetch").click(function() {
+            $("#mainjs").attr("src", "fetch.js");
+            $(".container").css("background-color", "#FF5722");
+            $(".container").css("color", "#fff");
+            $("#type").text(" - Fetch API");
+
+        })
+    </script>
+</body>
+
+</html>
