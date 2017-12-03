@@ -66,3 +66,9 @@ body {
     color: #fff;
     border: none;
 }
+
+@media (max-width) {
+    body {
+        width: 100%;
+    }
+}
