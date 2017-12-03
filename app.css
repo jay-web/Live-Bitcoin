@@ -70,5 +70,6 @@ body {
 @media (max-width: 500px) {
     body {
         width: 100%;
+        text-align: center;
     }
 }
