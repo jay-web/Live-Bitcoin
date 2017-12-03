@@ -67,7 +67,7 @@ body {
     border: none;
 }
 
-@media (max-width) {
+@media (max-width: 500px) {
     body {
         width: 100%;
     }
