@@ -67,7 +67,7 @@ body {
     border: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
     body {
         width: 100%;
         text-align: center;
